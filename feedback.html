@@ -31,7 +31,7 @@
 
 <section id="feedback-section">
     <h2>Leave Your Feedback</h2>
-    <form id="feedback-form" action="thank you.html" target="_parent" method="post">
+    <form id="feedback-form" onsubmit="handleSubmit(event)">
       <div class="form-group">
         <label for="name">Name</label>
         <input type="text" id="name" name="name" required>
@@ -56,6 +56,12 @@
       <button type="submit">Submit Feedback</button>
     </form>
   </section>
+         <script>
+       function handleSubmit(event) {
+      event.preventDefault();
+      window.location.href= 'thank you.html';
+    }
+  </script>
   <footer>
     <div class="container">
       <div class="row">
